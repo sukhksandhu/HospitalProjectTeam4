@@ -4,7 +4,7 @@
 
 ### Created two features for Hospital project
 
-##FAQ( Frequently Asked Questions)__
+## FAQ( Frequently Asked Questions)
 
 ### Models
 
