@@ -1,10 +1,10 @@
 # HospitalProjectTeam4
 
-## By Sukhdeep Sandhu
+### By Sukhdeep Sandhu
 
-###Created two features for Hospital project
+### Created two features for Hospital project
 
-__FAQ( Frequently Asked Questions)__
+##FAQ( Frequently Asked Questions)__
 
 ### Models
 
@@ -22,7 +22,7 @@ __FAQ( Frequently Asked Questions)__
 
 * FAQController.cs
 
-__Book Appointments__
+## Book Appointments
 
 ### Models
 
