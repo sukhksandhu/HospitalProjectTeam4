@@ -2,9 +2,9 @@
 
 ## By Sukhdeep Sandhu
 
-__Created two features for Hospital project__
+###Created two features for Hospital project
 
-1) FAQ( Frequently Asked Questions)
+__FAQ( Frequently Asked Questions)__
 
 ### Models
 
@@ -22,7 +22,7 @@ __Created two features for Hospital project__
 
 * FAQController.cs
 
-2) Book Appointments
+__Book Appointments__
 
 ### Models
 
