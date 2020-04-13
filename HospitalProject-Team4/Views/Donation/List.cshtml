@@ -1,0 +1,38 @@
+﻿@model List<HospitalProject_Team4.Models.Donation>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Donors</h2>
+<div class="navbar">
+    <a class="navlink" href="/Donation/Add">Add More</a>
+</div>
+<form action="/Donation/List" method="GET">
+    <input type="text" name="searchkey" id="searchkey" />
+    <input type="submit" value="Search" />
+</form>
+<div class="tilecontainer">
+    @{
+        foreach (var Donation in Model)
+        {
+            <div class="listitem">
+           
+                            <a href="/Donation/Show/@Donation.DonationID">
+                                @Donation.ApplicationUser.UserName
+                            </a>
+                               
+                <div class="itemdetails">
+                    <div class="listcat"> 
+                        <strong>Email  :</strong> @Donation.ApplicationUser.Email</div>
+
+                    <div class="listcat"><strong>Amount :</strong> <span>@Donation.donation_amount</span></div>
+                    <div class="listcat"><strong>Donated on :</strong> <span>@Donation.donated_on</span></div>
+                    
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        }
+    }
+    <div style="clear:both;"></div>
+</div>

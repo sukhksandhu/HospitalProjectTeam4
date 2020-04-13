@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+<!--this  page is meant for admin only who can add faqs -->
+<h2>Add FAQ</h2>
+<!--goes to controller FAQ and method named ADD followed by httppost to execute ADD method to add the entry into database-->
+<form method="POST" action="/FAQ/Add">
+    <!--Field for entering question by admin-->
+    <div class="inpfield"><span>Question:</span><input type="text" name="question" id="question" /></div>
+    <!--Field for entering answer by admin-->
+    <div class="inpfield"><span>Answer:</span><input type="text" name="answer" id="answer" /></div>
+    <!--button to submit FAQ or add FAQ-->
+    <div class="inpfield">
+        <input type="submit" value="Add FAQ">
+    </div>
+</form>
+
+

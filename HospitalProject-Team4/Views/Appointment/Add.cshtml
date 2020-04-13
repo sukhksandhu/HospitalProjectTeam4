@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add Appointment</h2>
+<!--This appointment page is accessible by admin only and admin can only add doctor patient and date,time for the appointment-->
+<form action="/Appointment/AddAppointment" method="post">
+    <!--adding doctor -->
+    <div class="inpfield"><span>Doctor name:</span><input type="text" name="DoctorID" id="doctor" /></div>
+    <!--adding patient-->
+    <div class="inpfield"><span>Patient name:</span><input type="text" name="PatientID" id="patient" /></div>
+    <!--adding date and time for the appointment-->
+    <div class="inpfield"><span>Date for appointment:</span><input type="datetime" name="appointmentdate" id="date" /></div>
+    <!--adding status -->
+    <div class="inpfield"><span>Status:</span><input type="text" name="appointmentstatus" id="status" /></div>
+    <div class="inpfield">
+        <input type="submit" value="Add Appointment">
+    </div>
+</form>
+

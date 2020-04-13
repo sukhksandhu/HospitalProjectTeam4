@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "ViewFaq";
+}
+
+<h2>ViewFaq</h2>
+
+
+        <div class="col2">
+            <div><span>Question:</span>@Model.question</div><a href="/FAQ/Update/@Model.FAQId">Edit</a>
+            <div><span>Answer:</span>@Model.answer</div><a href="/FAQ/Delete/@Model.FAQId">Delete</a>
+
+
+        </div>
+ 
+

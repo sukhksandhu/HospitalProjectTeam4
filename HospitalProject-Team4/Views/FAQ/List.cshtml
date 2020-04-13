@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNet.Identity
+
+
+@{
+    ViewBag.Title = "List";
+}
+<!--This list is designed for showing questions from FAQs table with the thought in mind that if admin
+    click on question,viewadmin page should be opened which has edit and delete options 
+    and when non-admin user openes should open page only with questions and answers without the edit and delete options-->
+<h2>List FAQ</h2>
+
+<a href="/FAQ/Add">Add FAQ</a>
+        @{
+            foreach (var faq in Model)
+
+            {
+
+                <!--if admin clicks here opens Admin view Faq where admin can update and delete-->
+                //if (Roles.IsUserInRole(User.Identity.GetUserName(), "Admin"))
+                //{
+                    <div id="divlist">
+
+
+                        <a href="/FAQ/AdminViewFaq/@faq.FAQId">
+                            <span>@faq.question</span>
+                        </a>
+
+
+                    </div>
+                    //}
+                    //else
+                    //{
+                    <!--if user clicks here opens view Faq-->
+                    @*<div id="divlist">
+
+
+                        <a href="/FAQ/ViewFaq/@faq.FAQId">
+                            <span>@faq.question</span>
+                        </a>
+                    </div>*@
+               // }
+
+
+
+            }
+        }

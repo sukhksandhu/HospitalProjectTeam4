@@ -1,0 +1,47 @@
+﻿
+@model HospitalProject_Team4.Models.VolunteerRecruitment
+@{
+    ViewBag.Title = "Update";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+
+    <h2>Update</h2>
+    <div class="navbar">
+        <a href="/VolunteerRecruitment/List">Back to List</a>
+    </div>
+    <!-- Do not forget enctype="multiplart/form-data" if you want to do file upload! -->
+    <form action="/VolunteerRecruitment/Update/@Model.volunteer_id" method="POST" enctype="multipart/form-data">
+
+        <div class="inpfield">
+            <span>User Name: </span>
+            <input type="text" name="userName" disabled="true" id="userName" value="@Model.ApplicationUser.UserName" />
+        </div>
+
+        <div class="inpfield">
+            <span>Phone Number: </span>
+            <input type="text" name="phoneNumber" id="phoneNumber" value="@Model.ApplicationUser.PhoneNumber" />
+        </div>
+
+
+        <div class="inpfield">
+            <span>File Upload: </span>
+            <input type="file" name="VolunteerCV" id="VolunteerCV" />
+        </div>
+
+        <div class="inpfield">
+            <span>Volunteer Specialization</span>
+            <textarea id="volunteerspecialization" name="volunteerspecialization">@Model.volunteer_specialization</textarea>
+        </div>
+
+        <div class="inpfield"><input type="submit" value="Update Volunteer" /></div>
+
+    </form>
+</body>
+</html>

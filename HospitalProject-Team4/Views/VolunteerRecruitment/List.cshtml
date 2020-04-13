@@ -1,0 +1,43 @@
+﻿@model List<HospitalProject_Team4.Models.VolunteerRecruitment>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Volunteers</h2>
+<div class="navbar">
+    <a class="navlink" href="/VolunteerRecruitment/Add">Add New</a>
+</div>
+<form action="/VolunteerRecruitment/List" method="GET">
+    <input type="text" name="volunteersearchkey" id="volunteersearchkey" />
+    <input type="submit" value="Search" />
+</form>
+<div class="tilecontainer">
+    @{
+        foreach (var Volunteer in Model)
+        {
+            <div class="listitem">
+                    <div class="itemimage">
+                            <a href="/VolunteerRecruitment/Show/@Volunteer.volunteer_id">
+                                @Volunteer.ApplicationUser.UserName
+                            </a>
+                                @{      
+                                    if (Volunteer.HasFile == 1)
+                                    {
+                                        <img src="../../Content/VolunteerFiles/@(Volunteer.HasFile).@(Volunteer.volunteer_FileExtension)" alt="File of @Volunteer.volunteer_status" />
+                                    }
+                                }
+</div>
+                <div class="itemdetails">
+                    <div class="listcat"> 
+                        <strong>Specialization :</strong> @Volunteer.volunteer_specialization</div>
+
+                    <div class="listcat"><strong>Status :</strong> <span>@Volunteer.volunteer_status</span></div>
+                    
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        }
+    }
+    <div style="clear:both;"></div>
+</div>

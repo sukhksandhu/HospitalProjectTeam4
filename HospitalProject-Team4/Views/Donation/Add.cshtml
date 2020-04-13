@@ -1,0 +1,66 @@
+﻿@{
+  ViewBag.Title = "Add";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    <title>Donate Now</title>
+</head>
+<body>
+
+    <div class="errorbox">
+        @{
+            if (ViewBag.ErrorMessage != null)
+            {
+                @ViewBag.ErrorMessage
+                <ul>
+                    @foreach (var Error in ViewBag.Errors)
+                    {
+                        <li>@Error</li>
+                    }
+                </ul>
+            }
+        }
+
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <form method="POST" action="/Donation/Add">
+                <div class="section_header">Account Details</div>
+                <div class="inpfield">
+                    <span>User Name:</span>
+                    <input type="text" name="Username" id="Username" />
+                </div>
+                <div class="inpfield">
+                    <span>Email:</span>
+                    <input type="text" name="Useremail" id="Useremail" />
+                </div>
+                <div class="inpfield">
+                    <span>Phone:</span>
+                    <input type="text" name="phoneNumber" id="phoneNumber" />
+                </div>
+                <div class="inpfield">
+                    <span>Password:</span>
+                    <input type="password" name="Userpass" id="Userpass" />
+                </div>
+              
+
+                <div class="section_header">Donor Details</div>
+                <div class="inpfield">
+                    <span>Donation Amount: </span>
+                    <input id="donation_amount" type="text" name="donation_amount" />
+                </div>
+                <div class="inpfield">
+                    <input type="submit" value="Make Donation">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

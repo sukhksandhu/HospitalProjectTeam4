@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<!--this page is for listing the appointments and linked with add link where admin can add an appointment-->
+
+<a href="/Appointment/Add">Add Appointment</a>
+@{
+    foreach (var aps in Model)
+
+    {
+
+    <div class="col2">
+        <!--here it shows the appointment date and appointmentstatus-->
+        @*Doctor name @aps.ApplicationUser.Doctor
+        Patient name @aps.ApplicationUser.Patient*@
+
+        <div><span>Date:</span>@aps.appointmentdate</div>
+        <div><span>Status:</span>@aps.appointmentstatus</div>
+        <a href="/Appointment/Update/@aps.AppointmentID">Edit</a>
+        <a href="/Appointment/Delete/@aps.AppointmentID">Delete</a>
+
+    </div>
+        }
+    }

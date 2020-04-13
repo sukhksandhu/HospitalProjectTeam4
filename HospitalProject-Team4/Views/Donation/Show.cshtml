@@ -1,0 +1,32 @@
+﻿@model HospitalProject_Team4.Models.Donation
+@{
+    ViewBag.Title = "Add";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+
+    <h2> @Model.ApplicationUser.UserName</h2>
+
+    <div class="navbar">
+        <a class="navlink" href="/Donation/List">Back to List</a>
+        <a class="navlink" href="/Donation/Update/@Model.ApplicationUser.Id">Update</a>
+        <a class="navlink" href="/Donation/DeleteConfirm/@Model.DonationID">Delete</a>
+    </div>
+    <div>
+        <div class="col2">
+            <div><strong>First Name:</strong> @Model.ApplicationUser.UserName</div>
+            <div><strong>Phone Number:</strong>@Model.ApplicationUser.PhoneNumber</div>
+            <div><strong>Email:</strong> @Model.ApplicationUser.Email</div>
+
+        </div>
+    </div>
+
+</body>
+</html>

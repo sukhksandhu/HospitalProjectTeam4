@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+<!--This page is meant to designed for admin only who has only permission to update the question or answer or both -->
+<h2>Update</h2>
+Page for Update 
+<!--goes to FAQ controller and looks for method Update followed by httppost and updates the one which is selected from the list by taking id with it-->
+<form method="POST" action="/FAQ/Update/@Model.FAQId">
+    <!--Field for updating question by admin , its initial value is hold in the field which is to be updated-->
+    <div class="inpfield"><span>Question:</span><input type="text" name="question" id="question" value="@Model.question" /></div>
+    <!--Field for answer question by admin , its initial value is hold in the field which is to be updated-->
+    <div class="inpfield"><span>Answer:</span><input type="text" name="answer" id="answer" value="@Model.answer" /></div>
+    <!--update button when submitted handled by post method-->
+    <div class="inpfield">
+        <input type="submit" value="Update FAQ">
+    </div>
+</form>
+

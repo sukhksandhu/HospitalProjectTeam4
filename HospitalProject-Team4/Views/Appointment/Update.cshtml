@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<!--goes to FAQ controller and looks for method Update followed by httppost and updates the one which is selected from the list by taking id with it-->
+<form method="POST" action="/Appointment/Update/@Model.AppointmentID">
+    <!--Field for updating appointment date by admin , its initial value is hold in the field which is to be updated-->
+    <div class="inpfield"><span>Appointment Date:</span><input type="datetime" name="appointmentdate" id="date" value="@Model.appointmentdate" /></div>
+    <!--Field for status question by admin , its initial value is hold in the field which is to be updated-->
+    <div class="inpfield"><span>Status:</span><input type="text" name="appointmentstatus" id="appointmentstatus" value="@Model.appointmentstatus" /></div>
+    <!--update button when submitted handled by post method-->
+    <div class="inpfield">
+        <input type="submit" value="Update Appointment">
+    </div>
+</form>
+
+

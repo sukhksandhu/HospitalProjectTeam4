@@ -1,0 +1,45 @@
+﻿@model HospitalProject_Team4.Models.Donation
+@{
+    ViewBag.Title = "Update";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+
+    <h2>Update of Donation</h2>
+    <div class="navbar">
+        <a href="/Donation/List">Back to List</a>
+    </div>
+    <form action="/VolunteerRecruitment/Update/@Model.DonationID" method="POST">
+
+        <div class="inpfield">
+            <span>User Name: </span>
+            <input type="text" name="userName" disabled="true" id="userName" value="@Model.ApplicationUser.UserName" />
+        </div>
+
+        <div class="inpfield">
+            <span>Phone Number: </span>
+            <input type="text" name="phoneNumber" id="phoneNumber" value="@Model.ApplicationUser.PhoneNumber" />
+        </div>
+
+
+        <div class="inpfield">
+            <span>Donated Amount: </span>
+            <input type="text" name="donated_on" id="donated_on" />
+        </div>
+
+        <div class="inpfield">
+            <span>Donated on : </span>
+            <input value="@Model.donated_on" id="donated_on" name="donated_on"/>
+        </div>
+
+        <div class="inpfield"><input type="submit" value="Update Volunteer" /></div>
+
+    </form>
+</body>
+</html>
